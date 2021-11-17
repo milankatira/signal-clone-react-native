@@ -6,6 +6,9 @@ const TabOneScreen = () => {
     <View style={styles.container}>
 
       <Image source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png' }} style={styles.image} />
+      <View style={styles.badgeContainer} >
+        <Text style={styles.badgeText}>4</Text>
+      </View>
       <View style={styles.rightContainer}>
         <View style={styles.row}>
           <Text style={styles.name}>elon must</Text>
@@ -21,16 +24,16 @@ export default TabOneScreen
 
 const styles = StyleSheet.create({
   text: {
-    color:"gray"
+    color: "gray"
   },
   container: {
-    flexDirection: 'row', 
+    flexDirection: 'row',
     padding: 10
   },
   name: {
-    fontWeight:'bold',
-    fontSize:18,
-    marginBottom:3
+    fontWeight: 'bold',
+    fontSize: 18,
+    marginBottom: 3
   },
   image: {
     height: '50px',
@@ -40,10 +43,27 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    justifyContent:'space-between',
+    justifyContent: 'space-between',
   },
-  rightContainer:{
-    flex:1,
-    justifyContent:'center'
+  rightContainer: {
+    flex: 1,
+    justifyContent: 'center'
+  },
+  badgeContainer: {
+    backgroundColor: '#3872E9',
+    width: 20,
+    height: 20,
+    borderRadius: 50,
+    justifyContent:'center',
+    alignItems:'center',
+    position:'absolute',
+    left:44,
+    top:10,
+    borderWidth:1,
+    borderColor:'white'
+  },
+  badgeText: {
+    color: 'white',
+    fontSize:12
   }
 })
