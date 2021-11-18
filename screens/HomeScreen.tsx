@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, FlatList } from "react-native";
-import ChatRoomItem from "../components/ChatRoomItem/";
+import ChatRoomItem from "../components/ChatRoomItem";
 import ChatRoomsData from "../assets/dummy-data/ChatRooms";
 
 const chatRoom1 = ChatRoomsData[0];
