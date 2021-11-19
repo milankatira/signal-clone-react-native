@@ -1,21 +1,60 @@
-import React from "react";
-import { StyleSheet, TextInput, View, Text } from "react-native";
-import { Feather } from '@expo/vector-icons';
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  TextInput,
+  View,
+  Text,
+  Pressable,
+  Platform,
+  KeyboardAvoidingView,
+} from "react-native";
+import { Feather } from "@expo/vector-icons";
+
+import messages from "../messages";
 
 const Messageinput = () => {
+  const [message, setMessage] = useState("");
+
+  const sendMessage = () => {
+    console.warn("send message");
+  };
+
+  const onPlusClicked = () => {
+    console.warn("plus click");
+  };
+  const onPress = () => {
+    if (message) {
+      sendMessage();
+    } else {
+      onPlusClicked();
+    }
+  };
   return (
-    <View style={styles.root}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.root}
+      keyboardVerticalOffset={100}
+    >
       <View style={styles.inputContainer}>
-      <Feather name="smile" size={24} color="gray" style={styles.icon} />
-        <TextInput style={styles.input} />
+        <Feather name="smile" size={24} color="gray" style={styles.icon} />
+        <TextInput
+          style={styles.input}
+          value={message}
+          placeholder="signal message..."
+          onChangeText={setMessage}
+        />
         <Feather name="camera" size={24} color="grey" style={styles.icon} />
         <Feather name="mic" size={24} color="gray" style={styles.icon} />
       </View>
 
-      <View style={styles.buttonContainer}> 
-      <Feather name="plus" size={24} color="white" style={styles.icon}  />
-      </View>
-    </View>
+      <Pressable onPress={onPress} style={styles.buttonContainer}>
+        {message ? (
+          <Feather name="send" size={24} color="white" style={styles.icon} />
+        ) : (
+          <Feather name="plus" size={24} color="white" style={styles.icon} />
+        )}
+      </Pressable>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -50,8 +89,8 @@ const styles = StyleSheet.create({
     height: 40,
     backgroundColor: "#3777f0",
     borderRadius: 25,
-    alignItems: 'center',
-    justifyContent:'center'
+    alignItems: "center",
+    justifyContent: "center",
   },
   buttonText: {
     color: "white",
