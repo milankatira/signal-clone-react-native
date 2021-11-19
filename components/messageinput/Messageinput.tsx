@@ -16,11 +16,11 @@ const Messageinput = () => {
   const [message, setMessage] = useState("");
 
   const sendMessage = () => {
-    console.warn("send message");
+
   };
 
   const onPlusClicked = () => {
-    console.warn("plus click");
+
   };
   const onPress = () => {
     if (message) {
@@ -82,7 +82,6 @@ const styles = StyleSheet.create({
     borderColor: "#dedede",
     alignItems: "center",
     flexDirection: "row",
-    padding: 5,
   },
   buttonContainer: {
     width: 40,

@@ -111,23 +111,9 @@ export default [{
     content: 'How are you doing?',
     createdAt: '2020-10-02T15:40:00.000Z',
   }
-}, {
-  id: '8',
-  users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
-  }, {
-    id: 'u9',
-    name: 'Carlos',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg',
-  }],
-  lastMessage: {
-    id: 'm8',
-    content: 'Hola hola coca cola?',
-    createdAt: '2020-09-27T15:40:00.000Z',
-  }
-}, {
+},
+
+{
   id: '9',
   users: [{
     id: 'u1',
@@ -143,4 +129,6 @@ export default [{
     content: 'Meet me at the same place',
     createdAt: '2020-09-25T15:40:00.000Z',
   },
-}]
+}
+
+]

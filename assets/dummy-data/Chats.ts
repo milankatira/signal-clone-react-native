@@ -65,6 +65,16 @@ export default {
 			id: 'u2',
 			name: 'Elon Musk',
 		},
-	}]
+	}, {
+		id: 'm6',
+		content: 'going to the Moooooon',
+		createdAt: '2020-10-03T14:49:00.000Z',
+		user: {
+			id: 'u2',
+			name: 'Elon Musk',
+		},
+	},
+
+]
 }
 
